@@ -1,13 +1,13 @@
 #ifndef CELLARRAY_H
 #define CELLARRAY_H
 
-#define MAX_PIRATES    16
+#define MAX_CELLS      48
 
 class CellArray {
 
 // Data members
 private:
-    Pirate *pirates[MAX_PIRATES];
+    Cell *cells[MAX_CELLS];
     
 // Constructor
 public:
@@ -15,10 +15,10 @@ public:
 
 // Member functions
 public:
-    void add(Pirate*);
+    void add(Cell*);
     void remove(int);       // the int is an index
     void get(int);      
     void set(int);
-    int getIndex(Pirate*);
+    int getIndex(Cell*);
 }
 #endif
