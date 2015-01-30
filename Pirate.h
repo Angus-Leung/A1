@@ -26,6 +26,7 @@ public:
 public:
     int getPirateId();
     int getPirateSpace();
+    int getNextPirateId();
 };
 
 

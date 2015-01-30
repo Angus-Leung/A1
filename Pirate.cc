@@ -10,16 +10,21 @@
 using namespace std;
 #include "Pirate.h"
 
-Pirate::Pirate(int i, int s){
+Pirate::Pirate(int i, int s) {
     id = i;
     space = s;
 }
 
-int getPirateId()
-{
+int Pirate::getPirateId() {
     return id;
 }
 
-int getPirateSpace(){
+int Pirate::getNextPirateId() {
+    static int nextId = 1;
+    
+    return(nextId++); 
+}
+
+int Pirate::getPirateSpace() {
     return space;
 }
