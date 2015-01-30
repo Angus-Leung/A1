@@ -1,6 +1,11 @@
 #ifndef CELL_H
 #define CELL_H
 
+#define MAX_CELLS 		48
+#define MAX_CELL_SPACE 	7
+#define MAX_PIRATES 	16
+
+
 #include <stdio.h>
 
 class Cell {
@@ -14,17 +19,12 @@ private:
 //Constuctors
 public:
     Cell();
-    
-    Cell(int cNum, int sRem);
         
 //Functions
 public:
-    int getCellNum();
+    int getNextCellNum();
     int getSpaceRemaining();
     int getNumPirates();
-    void setSpaceRemaining();
-    void addNumPirates();
-    
 };
 
 #endif
