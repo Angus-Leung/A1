@@ -1,14 +1,24 @@
-//
-//  CellArray.h
-//  
-//
-//  Created by Angus Leung on 2015-01-30.
-//
-//
+#ifndef CELLARRAY_H
+#define CELLARRAY_H
 
-#ifndef ____CellArray__
-#define ____CellArray__
+#define MAX_PIRATES    16
 
-#include <stdio.h>
+class CellArray {
 
-#endif /* defined(____CellArray__) */
+// Data members
+private:
+    Pirate *pirates[MAX_PIRATES];
+    
+// Constructor
+public:
+    CellArray();
+
+// Member functions
+public:
+    void add(Pirate*);
+    void remove(int);       // the int is an index
+    void get(int);      
+    void set(int);
+    int getIndex(Pirate*);
+}
+#endif
