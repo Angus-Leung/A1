@@ -24,9 +24,8 @@ public:
         
 //Functions
 public:
-    int getPirateId()
-    int getPirateSpace()
-
+    int getPirateId();
+    int getPirateSpace();
 };
 
 
