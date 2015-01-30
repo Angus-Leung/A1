@@ -12,13 +12,13 @@ private:
     
 //Constuctors
 public:
-    Cell(CellArray, int=0);
+    Brig();
         
 //Functions
 public:
     int getNumCells();
     void addPirates();
-    void addOnePirate(Pirate);
+    void addOnePirate(Pirate*);
 };
 
 #endif
