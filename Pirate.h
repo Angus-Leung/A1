@@ -11,7 +11,7 @@
 
 #include <stdio.h>
 
-class Pirate{
+class Pirate {
     
 //Data members
 private:
