@@ -6,9 +6,25 @@
 //
 //
 
-#ifndef ____PirateArray__
-#define ____PirateArray__
+#ifndef PIRATE_ARRAY
+#define PIRATE_ARRAY
 
-#include <stdio.h>
+#define MAX_PIRATES    16
 
-#endif /* defined(____PirateArray__) */
+// Data members
+private:
+Pirate *pirates[MAX_PIRATES];
+
+// Constructor
+public:
+PirateArray();
+
+// Member functions
+public:
+void add(Pirate*);
+void remove(int);       // the int is an index
+void get(int);
+void set(int);
+int getIndex(Pirate*);
+
+#endif 
