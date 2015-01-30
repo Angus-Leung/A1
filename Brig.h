@@ -17,6 +17,8 @@ public:
 //Functions
 public:
     int getNumCells();
+    void addPirates();
+    void addOnePirate(Pirate);
 };
 
 #endif
