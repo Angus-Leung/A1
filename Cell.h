@@ -22,7 +22,7 @@ public:
         
 //Functions
 public:
-    int getNextCellNum();
+    static int getNextCellNum();
     int getSpaceRemaining();
     int getNumPirates();
 };
