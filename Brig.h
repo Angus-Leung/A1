@@ -3,6 +3,8 @@
 
 #include <stdio.h>
 
+#define MAX_CELLS      48
+
 class Brig {
     
 //Data members

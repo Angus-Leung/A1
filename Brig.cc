@@ -14,7 +14,7 @@ Brig::Brig() {
 */
 
 Brig::addPirates() {
-    Pirate *newPirate;
+    Pirate* newPirate;
     int num;
 
     // THIS IS SOMETHING THAT SHOULD BE IN A USER I/O CLASS
@@ -30,38 +30,40 @@ Brig::addPirates() {
 }
 
 Brig::addOnePirate(Pirate *newPirate) {
-/*  // figure out how the CellArray works first
-    CellType *cell = NULL;
+    Cell* cell = NULL;
     int index = -1;
     int i;
 
-    for (i=0; i<brig->numCells; ++i) {
-        if (pirateFits(brig->cells[i], pirate)) {
-            cell = brig->cells[i];
+    for (i = 0; i< numCells; ++i) {
+        if (pirateFits(cells.get(i), pirate)) {
+            cell = cells.get(i);
         }
     }
 
     if (cell == NULL) {
-        if (brig->numCells == MAX_CELLS) {
-            printf("Could not add pirate -- press enter to continue...");
+        if (numCells == MAX_CELLS) {
+            // these next 2 lines could be replaced by something like pause() from Christine's util.c in a control object
+            cout << "Could not add pirate -- press enter to continue...";
             getchar();
             return;
         }
-        cell = (CellType *) malloc(sizeof(CellType));
-        cell->cellNumber     = getNextCellId();
-        cell->spaceRemaining = MAX_CELL_SPACE;
-        cell->numPirates     = 0;
-        brig->cells[brig->numCells] = cell;
-        brig->numCells++;
+        cell = new Cell();
+        // these are all handled in the constructor:
+        // cell->cellNumber     = getNextCellId();
+//         cell->spaceRemaining = MAX_CELL_SPACE;
+//         cell->numPirates     = 0;
+        cells.add(cell);
+        numCells++;
     }
 
     if (cell->numPirates == MAX_PIRATES) {
+        // again, replace this with a pause() function in a control object
         printf("Could not add pirate -- press enter to continue...");
         getchar();
         return;
     }
-    cell->pirates[cell->numPirates] = pirate;
+    
+    cell->add(newPirate);
     cell->numPirates++;
-    cell->spaceRemaining -= pirate->space;
-*/
+    cell->spaceRemaining -= newPirate->space;
 }

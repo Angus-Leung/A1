@@ -17,8 +17,10 @@ public:
 public:
     void add(Cell*);
     void remove(int);       // the int is an index
-    void get(int);      
+    Cell* get(int);      
     void set(int);
     int getIndex(Cell*);
+    
 }
+
 #endif
