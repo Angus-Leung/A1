@@ -1,11 +1,3 @@
-//
-//  Pirate.h
-//  
-//
-//  Created by Angus Leung on 2015-01-28.
-//
-//
-
 #ifndef PIRATE_H
 #define PIRATE_H
 
@@ -20,7 +12,7 @@ private:
     
 //Constuctors
 public:
-    Pirate(int = 0, space = 1);
+    Pirate();
         
 //Functions
 public:

@@ -13,7 +13,11 @@ Brig::Brig() {
     and adds each pirate to the brig
 */
 
-Brig::addPirates() {
+int Brig::getNumCells() {
+    return numCells;
+}
+
+void Brig::addPirates() {
     Pirate* newPirate;
     int num;
 
@@ -23,13 +27,13 @@ Brig::addPirates() {
 
     while (num > 0) {
     
-        newPirate = new Pirate(getNextPirateId(), randomInt(4)+2);
+        newPirate = new Pirate();
         addOnePirate(newPirate);
         --num;
     }
 }
 
-Brig::addOnePirate(Pirate *newPirate) {
+void Brig::addOnePirate(Pirate *newPirate) {
     Cell* cell = NULL;
     int index = -1;
     int i;
@@ -54,7 +58,7 @@ Brig::addOnePirate(Pirate *newPirate) {
 
     if (cell->numPirates == MAX_PIRATES) {
         // again, replace this with a pause() function in a control object
-        printf("Could not add pirate -- press enter to continue...");
+        cout << "Could not add pirate -- press enter to continue...";
         getchar();
         return;
     }

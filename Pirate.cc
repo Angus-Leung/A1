@@ -1,18 +1,10 @@
-//
-//  Pirate.cc
-//  
-//
-//  Created by Angus Leung on 2015-01-28.
-//
-//
-
 #include <iostream>
 using namespace std;
 #include "Pirate.h"
 
-Pirate::Pirate(int i, int s) {
-    id = i;
-    space = s;
+Pirate::Pirate() {
+    id = getNextPirateId();
+    space = randomInt(4) + 2;
 }
 
 int Pirate::getPirateId() {
