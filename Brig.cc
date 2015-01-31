@@ -5,7 +5,7 @@ using namespace std;
 Brig::Brig() {
     // constructor
     numCells = 0;
-    // cells = new CellArray
+    CellArray cells = CellArray();
 }
 
 /*
@@ -42,16 +42,12 @@ Brig::addOnePirate(Pirate *newPirate) {
 
     if (cell == NULL) {
         if (numCells == MAX_CELLS) {
-            // these next 2 lines could be replaced by something like pause() from Christine's util.c in a control object
+            // these next 2 lines could be replaced by something like pause() from Christine's util.c in a user IO object
             cout << "Could not add pirate -- press enter to continue...";
             getchar();
             return;
         }
         cell = new Cell();
-        // these are all handled in the constructor:
-        // cell->cellNumber     = getNextCellId();
-//         cell->spaceRemaining = MAX_CELL_SPACE;
-//         cell->numPirates     = 0;
         cells.add(cell);
         numCells++;
     }
