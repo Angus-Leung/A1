@@ -16,11 +16,10 @@ public:
 // Member functions
 public:
     void add(Cell*);
-    void remove(int);       // the int is an index
+    // void remove(int);       // the int is an index
     Cell* get(int);      
-    void set(int);
-    int getIndex(Cell*);
-    
+    void set(int, Cell*);
+    // int getIndex(Cell*);
 }
 
 #endif

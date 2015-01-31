@@ -1,9 +1,20 @@
-//
-//  CellArray.cc
-//  
-//
-//  Created by Angus Leung on 2015-01-30.
-//
-//
-
 #include "CellArray.h"
+
+CellArray::CellArray() {
+    // constructor
+    Cell *cells[MAX_CELLS];
+}
+
+void CellArray::add(Cell *newCell) {
+    static int index = 0;
+    cells[index] = newCell;
+    index++;
+}
+
+Cell* CellArray::get(int i) {
+    return cells[i];
+}
+
+void CellArray::set(int i, Cell* newCell) {
+    cells[i] = newCell;
+}
