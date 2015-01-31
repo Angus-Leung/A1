@@ -1,9 +1,16 @@
-//
-//  PirateArray.cc
-//  
-//
-//  Created by Angus Leung on 2015-01-30.
-//
-//
-
 #include "PirateArray.h"
+
+PirateArray::PirateArray() {
+    // constructor
+    Pirate *pirates[MAX_PIRATES];
+}
+
+void PirateArray::add(Pirate *newPirate) {
+    static int index = 0;
+    pirates[index] = newPirate;
+    index++;
+}
+
+Pirate* PirateArray::get(int i) {
+    return pirates[i];
+}

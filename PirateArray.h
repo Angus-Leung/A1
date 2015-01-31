@@ -1,11 +1,3 @@
-//
-//  PirateArray.h
-//  
-//
-//  Created by Angus Leung on 2015-01-30.
-//
-//
-
 #ifndef PIRATE_ARRAY
 #define PIRATE_ARRAY
 
@@ -13,18 +5,18 @@
 
 // Data members
 private:
-Pirate *pirates[MAX_PIRATES];
+    Pirate *pirates[MAX_PIRATES];
 
 // Constructor
 public:
-PirateArray();
+    PirateArray();
 
 // Member functions
 public:
-void add(Pirate*);
-void remove(int);       // the int is an index
-void get(int);
-void set(int);
-int getIndex(Pirate*);
+    void add(Pirate*);
+    //void remove(int);       // the int is an index
+    void get(int);
+    // void set(int);
+    //int getIndex(Pirate*);
 
 #endif 

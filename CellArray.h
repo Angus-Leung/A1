@@ -18,7 +18,7 @@ public:
     void add(Cell*);
     // void remove(int);       // the int is an index
     Cell* get(int);      
-    void set(int, Cell*);
+    // void set(int, Cell*);
     // int getIndex(Cell*);
 }
 

@@ -14,7 +14,3 @@ void CellArray::add(Cell *newCell) {
 Cell* CellArray::get(int i) {
     return cells[i];
 }
-
-void CellArray::set(int i, Cell* newCell) {
-    cells[i] = newCell;
-}
