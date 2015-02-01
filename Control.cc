@@ -8,6 +8,7 @@
 
 #include "Control.h"
 #include "Display.h"
+#include "Brig.h"
 
 void Control::Display(void)
 {
@@ -34,11 +35,11 @@ void Control::Display(void)
             }
         }
         else if (choice1 == 2) {
-            printBrig(&brig);
+            myBrig.printBrig();
         }
         if (choice2 != 0)
             Display::pause();
     }
-    cleanup(&brig);
+   // cleanup(&brig);
     
 }
