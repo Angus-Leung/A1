@@ -5,7 +5,7 @@ using namespace std;
 Brig::Brig() {
     // constructor
     numCells = 0;
-    CellArray cells = CellArray();
+    CellArray cells;
 }
 
 /*
@@ -70,18 +70,20 @@ void printBrig()
     int i, j;
     
     cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-    cout << "Brig: #cells=%d\n";
-    cout << this.numCells
+    cout << "Brig: #cells=" << numCells << "\n";
     
-    for (i=0; i<brig->numCells; ++i) {
-        printf("--Cell %d: space remaining=%d\n", i,
-               brig->cells[i]->spaceRemaining);
-        CellType *cell = brig->cells[i];
-        for (j=0; j<cell->numPirates; ++j) {
-            if (cell->pirates[j] == 0)
+    for (i = 0; i < numCells; ++i) {
+        Cell *myCell = cells.get(i);
+        numPirates = myCell->getNumPirates();
+        
+        cout << "--Cell %d: space remaining=" << i <<
+               myCell->getSpaceRemaining();
+        for (j = 0; j < numPirates(); ++j) {
+            if (myCell->getPirate(j) == 0)
                 continue;
             printf("----Pirate id: %d  space: %d\n",
-                   cell->pirates[j]->id, cell->pirates[j]->space);
+                   myCell->getPirate(j)->getPirateId,
+                   myCell->getPirates(j)->getPirateSpace);
         }
     }
 }
