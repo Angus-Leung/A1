@@ -35,7 +35,6 @@ void Brig::addPirates() {
 
 void Brig::addOnePirate(Pirate *newPirate) {
     Cell* cell = NULL;
-    int index = -1;
     int i;
 
     for (i = 0; i< numCells; ++i) {

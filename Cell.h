@@ -29,6 +29,7 @@ public:
     int getNumPirates();
     void setNumPirates(int);
     bool pirateFits(Pirate*);
+    void addPirate(Pirate*);
 };
 
 #endif
