@@ -5,6 +5,7 @@ using namespace std;
 //Constructor
 
 Cell:Cell() {
+    PirateArray pirates = PirateArray();
     cellNumber 		= getNextCellNum();
     spaceRemaining  = MAX_CELL_SPACE;
     numPirates		= 0;
@@ -22,6 +23,14 @@ int Cell::getSpaceRemaining() {
     return spaceRemaining;
 }
 
+void Cell::setSpaceRemaining(int newSpace) {
+    spaceRemaining = newSpace;
+}
+
 int Cell::getNumPirates() {
     return numPirates;
+}
+
+void Cell::setNumPirates(int newNum) {
+    numPirates = newNum;
 }

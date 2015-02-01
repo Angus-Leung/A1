@@ -12,6 +12,7 @@ class Cell {
     
 //Data members
 private:
+    PirateArray pirates;
     int cellNumber;
     int spaceRemaining;
     int numPirates;
@@ -24,7 +25,9 @@ public:
 public:
     static int getNextCellNum();
     int getSpaceRemaining();
+    void setSpaceRemaining(int);
     int getNumPirates();
+    void setNumPirates(int);
 };
 
 #endif
