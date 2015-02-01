@@ -20,6 +20,6 @@ public:
     Cell* get(int);      
     // void set(int, Cell*);
     // int getIndex(Cell*);
-}
+};
 
 #endif

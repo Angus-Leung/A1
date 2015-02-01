@@ -3,6 +3,8 @@
 
 #define MAX_PIRATES    16
 
+class PirateArray {
+
 // Data members
 private:
     Pirate *pirates[MAX_PIRATES];
@@ -14,9 +16,7 @@ public:
 // Member functions
 public:
     void add(Pirate*);
-    //void remove(int);       // the int is an index
     void get(int);
-    // void set(int);
-    //int getIndex(Pirate*);
-
+    
+};
 #endif 
