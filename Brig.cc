@@ -63,6 +63,4 @@ void Brig::addOnePirate(Pirate *newPirate) {
     }
     
     cell->add(newPirate);
-    cell->setNumPirates(cell->getNumPirates+1);
-    cell->setSpaceRemaining(cell->getSpaceRemaining - newPirate->getPirateSpace);
 }
