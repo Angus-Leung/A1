@@ -15,7 +15,7 @@ public:
 public:
     void add(Pirate*);
     //void remove(int);       // the int is an index
-    void get(int);
+    Pirate* getPirate(int);
     // void set(int);
     //int getIndex(Pirate*);
 

@@ -5,7 +5,7 @@ using namespace std;
 //Constructor
 
 Cell:Cell() {
-    PirateArray pirates = PirateArray();
+    PirateArray pirateList = PirateArray();
     cellNumber 		= getNextCellNum();
     spaceRemaining  = MAX_CELL_SPACE;
     numPirates		= 0;
@@ -47,4 +47,8 @@ void Cell::addPirate(PirateType *pirate) {
     pirates.add(pirate);
     spaceRemaining -= pirate->getPirateSpace();
     numPirates++;
+}
+
+Pirate* Cell::getPirate(int i){
+    return pirateList.getPirate(i);
 }

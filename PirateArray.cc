@@ -14,3 +14,7 @@ void PirateArray::add(Pirate *newPirate) {
 Pirate* PirateArray::get(int i) {
     return pirates[i];
 }
+
+Pirate* getPirate(int i){
+    return pirates[i];
+}

@@ -30,6 +30,7 @@ public:
     void setNumPirates(int);
     bool pirateFits(Pirate*);
     void addPirate(Pirate*);
+    Pirate* getPirate(int);
 };
 
 #endif
