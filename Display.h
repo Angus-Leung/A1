@@ -14,8 +14,8 @@ Class Display{
     
 public:
     //Functions
-    void mainMenu       (int);
-    void pirateMenu     (int);
+    static void mainMenu       (int);
+    static void pirateMenu     (int);
     
 }
 

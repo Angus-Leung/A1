@@ -12,7 +12,7 @@
 
 using namespace std;
 
-void Display::mainMenu (int *choice){
+static void Display::mainMenu (int *choice){
     
     *choice = -1;
     
@@ -27,7 +27,7 @@ void Display::mainMenu (int *choice){
     }
 }
 
-void Display::pirateMenu (){
+static void Display::pirateMenu (){
     
     *choice = -1;
     
