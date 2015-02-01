@@ -79,11 +79,10 @@ void printBrig()
         cout << "--Cell %d: space remaining=" << i <<
                myCell->getSpaceRemaining();
         for (j = 0; j < numPirates(); ++j) {
-            if (myCell->getPirate(j) == 0)
+            if (myCell->getPirate(j) == NULL)
                 continue;
-            printf("----Pirate id: %d  space: %d\n",
-                   myCell->getPirate(j)->getPirateId,
-                   myCell->getPirates(j)->getPirateSpace);
+            cout << "----Pirate id: "<<myCell->getPirate(j)->getPirateId()  << "space: " << myCell->getPirates(j)->getPirateSpace()
+                << "\n";
         }
     }
 }
