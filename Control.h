@@ -11,6 +11,8 @@
 
 #include <stdio.h>
 
+class Control{
+
 private:
 
 
@@ -19,5 +21,5 @@ public:
     void Display (void);
     
 
-
+};
 #endif

@@ -4,7 +4,7 @@ using namespace std;
 
 Pirate::Pirate() {
     id = getNextPirateId();
-    space = randomInt(4) + 2;
+    space = Random::randomInt(4) + 2;
 }
 
 int Pirate::getPirateId() {

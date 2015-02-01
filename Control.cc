@@ -14,6 +14,8 @@ void Control::Display(void)
     int choice1 = -1;
     int choice2 = -1;
     
+    Random::seed();
+    
     Brig myBrig;
     
     while (choice1 != 0) {
