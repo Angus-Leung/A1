@@ -41,3 +41,8 @@ static void Display::pirateMenu (){
     }
 
 }
+
+static void Display::pause(){
+    cout << "\nPress enter to continue...";
+    getchar();
+}
