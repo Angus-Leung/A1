@@ -7,31 +7,35 @@
 //
 
 #include "Control.h"
+#include "Display.h"
 
-void Display::mainMenu(void)
+void Control::Display(void)
 {
+    int choice1 = -1;
+    int choice2 = -1;
     
+    Brig myBrig;
     
     while (choice1 != 0) {
-        mainMenu(&choice1);
+        Display::mainMenu(&choice1);
         if (choice1 == 0) {
             break;
         }
         else if (choice1 == 1) {
             choice2 = -1;
             while (choice2 != 0) {
-                pirateMenu(&choice2);
+                Display::pirateMenu(&choice2);
                 if (choice2 == 0)
                     break;
                 else if (choice2 == 1)
-                    addPirates(&brig);
+                    myBrig.addPirates();
             }
         }
         else if (choice1 == 2) {
             printBrig(&brig);
         }
         if (choice2 != 0)
-            pause();
+            Display::pause();
     }
     cleanup(&brig);
     

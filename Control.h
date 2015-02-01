@@ -6,9 +6,18 @@
 //
 //
 
-#ifndef ____Control__
-#define ____Control__
+#ifndef CONTROL_H
+#define CONTROL_H
 
 #include <stdio.h>
 
-#endif /* defined(____Control__) */
+private:
+
+
+public:
+
+    void Display (void);
+    
+
+
+#endif
