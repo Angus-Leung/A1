@@ -4,14 +4,15 @@ using namespace std;
 
 Pirate::Pirate() {
     id = getNextPirateId();
-    space = Random::randomInt(4) + 2;
+    // space = Random::randomInt(4) + 2;
+    space = 2;
 }
 
 int Pirate::getPirateId() {
     return id;
 }
 
-static int Pirate::getNextPirateId() {
+int Pirate::getNextPirateId() {
     static int nextId = 1;
     
     return(nextId++); 

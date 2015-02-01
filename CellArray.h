@@ -3,6 +3,8 @@
 
 #define MAX_CELLS      48
 
+#include "Cell.h"
+
 class CellArray {
 
 // Data members
@@ -16,10 +18,7 @@ public:
 // Member functions
 public:
     void add(Cell*);
-    // void remove(int);       // the int is an index
-    Cell* get(int);      
-    // void set(int, Cell*);
-    // int getIndex(Cell*);
+    Cell* get(int);
 };
 
 #endif

@@ -1,7 +1,9 @@
-#ifndef PIRATE_ARRAY
-#define PIRATE_ARRAY
+#ifndef PIRATEARRAY_H
+#define PIRATEARRAY_H
 
 #define MAX_PIRATES    16
+
+#include "Pirate.h"
 
 class PirateArray {
 

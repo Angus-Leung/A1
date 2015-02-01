@@ -1,18 +1,15 @@
 #ifndef CELL_H
 #define CELL_H
 
-#define MAX_CELLS 		48
 #define MAX_CELL_SPACE 	7
-#define MAX_PIRATES 	16
 
-
-#include <stdio.h>
+#include "PirateArray.h"
 
 class Cell {
     
 //Data members
 private:
-    PirateArray pirates;
+    PirateArray pirateList;
     int cellNumber;
     int spaceRemaining;
     int numPirates;

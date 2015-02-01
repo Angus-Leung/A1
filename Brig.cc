@@ -5,7 +5,7 @@ using namespace std;
 Brig::Brig() {
     // constructor
     numCells = 0;
-    CellArray cells;
+    CellArray cellList = CellArray();
 }
 
 /*
@@ -24,6 +24,7 @@ void Brig::addPirates() {
     // THIS IS SOMETHING THAT SHOULD BE IN A USER I/O CLASS
     cout << "\nEnter the number of pirates:   ";
     cin >> num;
+    cout << "making " << num << " pirates" << endl;
 
     while (num > 0) {
     
@@ -38,8 +39,8 @@ void Brig::addOnePirate(Pirate *newPirate) {
     int i;
 
     for (i = 0; i< numCells; ++i) {
-        if (cells.get(i)->pirateFits(pirate)) {
-            cell = cells.get(i);
+        if (cellList.get(i)->pirateFits(newPirate)) {
+            cell = cellList.get(i);
         }
     }
 
@@ -50,39 +51,38 @@ void Brig::addOnePirate(Pirate *newPirate) {
             getchar();
             return;
         }
+        cout << "making a new cell" << endl;
         cell = new Cell();
-        cells.add(cell);
+        cellList.add(cell);
         numCells++;
     }
 
-    if (cell->getNumPirates == MAX_PIRATES) {
+    if (cell->getNumPirates() == MAX_PIRATES) {
         // again, replace this with a pause() function in a control object
         cout << "Could not add pirate -- press enter to continue...";
         getchar();
         return;
     }
     
-    cell->add(newPirate);
+    cell->addPirate(newPirate);
 }
 
 void Brig::printBrig()
 {
     int i, j;
-    
+
     cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-    cout << "Brig: #cells=" << numCells << "\n";
-    
+    cout << "Brig: #cells=" << numCells << endl;
+
     for (i = 0; i < numCells; ++i) {
-        Cell *myCell = cells.get(i);
-        numPirates = myCell->getNumPirates();
-        
-        cout << "--Cell %d: space remaining=" << i <<
-               myCell->getSpaceRemaining();
-        for (j = 0; j < numPirates(); ++j) {
-            if (myCell->getPirate(j) == NULL)
+        cout << "--Cell " << i << ": space remaining= " 
+            << cellList.get(i)->getSpaceRemaining() << endl;
+        Cell *cell = cellList.get(i);
+        for (j = 0; j < cell->getNumPirates(); ++j) {
+            if (cell->getPirate(j) == 0)
                 continue;
-            cout << "----Pirate id: "<<myCell->getPirate(j)->getPirateId()  << "space: " << myCell->getPirates(j)->getPirateSpace()
-                << "\n";
+            cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() 
+                << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
         }
     }
 }

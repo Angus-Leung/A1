@@ -1,8 +1,6 @@
 #ifndef PIRATE_H
 #define PIRATE_H
 
-#include <stdio.h>
-
 class Pirate {
     
 //Data members
