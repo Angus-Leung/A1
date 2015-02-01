@@ -65,11 +65,12 @@ void Brig::addOnePirate(Pirate *newPirate) {
     cell->add(newPirate);
 }
 
-void printBrig()
+void Brig::printBrig()
 {
     int i, j;
     
     cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+//<<<<<<< HEAD
     cout << "Brig: #cells=" << numCells << "\n";
     
     for (i = 0; i < numCells; ++i) {
@@ -83,6 +84,18 @@ void printBrig()
                 continue;
             cout << "----Pirate id: "<<myCell->getPirate(j)->getPirateId()  << "space: " << myCell->getPirates(j)->getPirateSpace()
                 << "\n";
+=======
+    cout << "Brig: #cells=" << this.numCells << endl;
+    
+    for (i = 0; i < numCells; ++i) {
+        cout << "--Cell " << i << ": space remaining=" << cells.get(i)->spaceRemaining << endl;
+        Cell *cell = cells.get(i);
+        for (j = 0; j < cell->getNumPirates(); ++j) {
+            if (cell->pirates[j] == 0)
+                continue;
+            cout << "----Pirate id: " << cell->pirates[j]->getPirateId() 
+                    << "  space: " << cell->pirates[j]->getPirateSpace() << endl;
+>>>>>>> FETCH_HEAD
         }
     }
 }

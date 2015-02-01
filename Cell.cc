@@ -37,10 +37,10 @@ void Cell::setNumPirates(int newNum) {
 
 bool Cell:pirateFits(PirateType *pirate) {
     if (spaceRemaining >= pirate->getPirateSpace) {
-        return false;
+        return true;
     }
     
-    return true;
+    return false;
 }
 
 void Cell::addPirate(PirateType *pirate) {
