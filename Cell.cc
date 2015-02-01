@@ -34,3 +34,12 @@ int Cell::getNumPirates() {
 void Cell::setNumPirates(int newNum) {
     numPirates = newNum;
 }
+
+bool Cell:pirateFits(PirateType *pirate)
+{
+    if (spaceRemaining >= pirate->getPirateSpace) {
+        return false;
+    }
+    
+    return true;
+}

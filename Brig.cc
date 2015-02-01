@@ -39,7 +39,7 @@ void Brig::addOnePirate(Pirate *newPirate) {
     int i;
 
     for (i = 0; i< numCells; ++i) {
-        if (pirateFits(cells.get(i), pirate)) {
+        if (cells.get(i)->pirateFits(pirate)) {
             cell = cells.get(i);
         }
     }
@@ -56,7 +56,7 @@ void Brig::addOnePirate(Pirate *newPirate) {
         numCells++;
     }
 
-    if (cell->numPirates == MAX_PIRATES) {
+    if (cell->getNumPirates == MAX_PIRATES) {
         // again, replace this with a pause() function in a control object
         cout << "Could not add pirate -- press enter to continue...";
         getchar();
@@ -65,5 +65,5 @@ void Brig::addOnePirate(Pirate *newPirate) {
     
     cell->add(newPirate);
     cell->setNumPirates(cell->getNumPirates+1);
-    cell->setSpaceRemaining(cell->getSpaceRemaining - newPirate->space);
+    cell->setSpaceRemaining(cell->getSpaceRemaining - newPirate->getPirateSpace);
 }

@@ -28,6 +28,7 @@ public:
     void setSpaceRemaining(int);
     int getNumPirates();
     void setNumPirates(int);
+    bool pirateFits(Pirate*);
 };
 
 #endif
