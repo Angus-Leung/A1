@@ -22,7 +22,7 @@ public:
     void addPirates();
     void addOnePirate(Pirate*);
     void printBrig();
-
+    void cleanup();
 };
 
 #endif

@@ -13,7 +13,7 @@ int Pirate::getPirateId() {
 }
 
 int Pirate::getNextPirateId() {
-    static int nextId = 1;
+    static int nextId = 1001;
     
     return(nextId++); 
 }
