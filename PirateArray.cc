@@ -11,10 +11,7 @@ void PirateArray::add(Pirate *newPirate) {
     index++;
 }
 
-Pirate* PirateArray::get(int i) {
+Pirate* PirateArray::getPirate(int i) {
     return pirates[i];
 }
 
-Pirate* getPirate(int i){
-    return pirates[i];
-}
