@@ -21,6 +21,8 @@ public:
     int getNumCells();
     void addPirates();
     void addOnePirate(Pirate*);
+    void printBrig();
+
 };
 
 #endif
