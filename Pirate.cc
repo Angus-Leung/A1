@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Pirate.h"
+#include "Random.h"
 
 Pirate::Pirate() {
     id = getNextPirateId();
