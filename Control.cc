@@ -5,7 +5,7 @@ void Control::startProgram() {
     int choice1 = -1;
     int choice2 = -1;
     
-    // Random::seed();
+    Random::seed();
     
     Brig myBrig;
     

@@ -6,6 +6,7 @@ class Random {
 public:
 
     static int randomInt(int);
+    static void seed();
 
 };
 #endif
