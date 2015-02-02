@@ -5,10 +5,8 @@ CellArray::CellArray() {
     Cell *cells[MAX_CELLS];
 }
 
-void CellArray::add(Cell *newCell) {
-    static int index = 0;
+void CellArray::add(Cell *newCell, int index) {
     cells[index] = newCell;
-    index++;
 }
 
 Cell* CellArray::get(int i) {

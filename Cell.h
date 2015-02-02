@@ -20,7 +20,7 @@ public:
         
 //Functions
 public:
-    static int getNextCellNum();
+    int getNextCellNum();
     int getSpaceRemaining();
     void setSpaceRemaining(int);
     int getNumPirates();

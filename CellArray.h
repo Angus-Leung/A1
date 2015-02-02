@@ -17,7 +17,7 @@ public:
 
 // Member functions
 public:
-    void add(Cell*);
+    void add(Cell*, int);
     Cell* get(int);
 };
 

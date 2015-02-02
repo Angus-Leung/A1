@@ -44,7 +44,7 @@ bool Cell::pirateFits(Pirate *pirate) {
 }
 
 void Cell::addPirate(Pirate *pirate) {
-    pirateList.add(pirate);
+    pirateList.add(pirate, numPirates);
     spaceRemaining -= pirate->getPirateSpace();
     numPirates++;
 }

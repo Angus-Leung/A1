@@ -50,12 +50,12 @@ void Brig::addOnePirate(Pirate *newPirate) {
             return;
         }
         cell = new Cell();
-        cellList.add(cell);
+        cellList.add(cell, numCells);
         numCells++;
     }
 
     if (cell->getNumPirates() == MAX_PIRATES) {
-        // again, replace this with a pause() function in a control object
+        // again, replace this with a pause() function in a user IO object
         cout << "Could not add pirate -- press enter to continue...";
         getchar();
         return;
