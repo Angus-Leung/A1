@@ -1,5 +1,6 @@
 #include "Control.h"
 #include "Display.h"
+#include "Random.h"
 
 void Control::startProgram() {
     int choice1 = -1;
