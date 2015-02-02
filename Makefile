@@ -1,10 +1,11 @@
-p1:	main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o
-	g++ -o p1 main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o
+p1:	main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
+	g++ -o p1 main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
 
 main.o:	main.cc Pirate.h PirateArray.h Cell.h CellArray.h Brig.h Display.h Control.h
 	g++ -c main.cc
 
-Control.o:	Control.cc Control.h Display.h Brig.h CellArray.h Cell.h PirateArray.h Pirate.h
+Control.o:	Control.cc Control.h Display.h Brig.h CellArray.h Cell.h PirateArray.h 
+Pirate.h
 	g++ -c Control.cc
 
 Display.o:	Display.cc Display.h Brig.h
@@ -24,4 +25,7 @@ PirateArray.o:	PirateArray.cc PirateArray.h Pirate.h
 
 Pirate.o:	Pirate.cc Pirate.h
 	g++ -c Pirate.cc
+
+Random.o:	Random.cc Random.h
+	g++ -c Random.cc
 
