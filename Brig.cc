@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "Brig.h"
+#include "Display.h"
 
 Brig::Brig() {
     // constructor
@@ -21,9 +22,7 @@ void Brig::addPirates() {
     Pirate* newPirate;
     int num;
 
-    // THIS IS SOMETHING THAT SHOULD BE IN A USER I/O CLASS
-    cout << "\nEnter the number of pirates:   ";
-    cin >> num;
+    Display::promptNumPirates(&num);
 
     while (num > 0) {
         newPirate = new Pirate();
@@ -49,8 +48,7 @@ void Brig::addOnePirate(Pirate *newPirate) {
     if (cell == NULL) {
         if (numCells == MAX_CELLS) {
             // these next 2 lines could be replaced by something like pause() from Christine's util.c in a user IO object
-            cout << "Could not add pirate -- press enter to continue...";
-            getchar();
+            Display::pause();
             return;
         }
         cell = new Cell();
@@ -60,30 +58,12 @@ void Brig::addOnePirate(Pirate *newPirate) {
 
     if (cell->getNumPirates() == MAX_PIRATES) {
         // again, replace this with a pause() function in a user IO object
-        cout << "Could not add pirate -- press enter to continue...";
-        getchar();
+        Display::pause();
         return;
     }
     
     cell->addPirate(newPirate);
 }
-
-// void Brig::printBrig() {
-//     int i, j;
-// 
-//     cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
-//     cout << "Brig: #cells=" << numCells << endl;
-// 
-//     for (i = 0; i < numCells; ++i) {
-//         cout << "--Cell " << i << ": space remaining= " << cellList.get(i)->getSpaceRemaining() << endl;
-//         Cell *cell = cellList.get(i);
-//         for (j = 0; j < cell->getNumPirates(); ++j) {
-//             if (cell->getPirate(j) == 0)
-//                 continue;
-//             cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
-//         }
-//     }
-// }
 
 void Brig::cleanup() {
     int i, j;

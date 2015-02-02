@@ -32,7 +32,7 @@ void Display::pirateMenu(int *choice) {
 }
 
 void Display::pause() {
-    cout << "\nPress enter to continue...";
+    cout << "Could not add pirate -- press enter to continue...";
     getchar();
 }
 
@@ -51,4 +51,9 @@ void Display::printBrig(Brig *brig) {
             cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
         }
     }
+}
+
+void Display::promptNumPirates(int *num) {
+    cout << "\nEnter the number of pirates:   ";
+    cin >> *num;
 }

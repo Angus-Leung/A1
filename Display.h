@@ -11,6 +11,7 @@ public:
     static void pirateMenu(int*);
     static void pause();
     static void printBrig(Brig*);
+    static void promptNumPirates(int*);
 };
 
 #endif
