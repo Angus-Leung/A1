@@ -19,9 +19,9 @@ public:
 //Functions
 public:
     int getNumCells();
+    Cell* getCell(int);
     void addPirates();
     void addOnePirate(Pirate*);
-    void printBrig();
     void cleanup();
 };
 

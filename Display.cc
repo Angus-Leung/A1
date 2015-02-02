@@ -1,19 +1,10 @@
-//
-//  Display.cc
-//  
-//
-//  Created by Angus Leung on 2015-01-28.
-//
-//
-
 #include "Display.h"
 #include <iostream>
 #include <string>
 
 using namespace std;
 
-static void Display::mainMenu (int *choice){
-    
+void Display::mainMenu(int *choice) {
     *choice = -1;
     
     cout << "\n\n\n                   WELCOME TO THE BRIG MANAGEMENT SYSTEM \n\n";
@@ -23,12 +14,11 @@ static void Display::mainMenu (int *choice){
     
     while (*choice < 0 || *choice > 2) {
         cout << "Enter your selection:  ";
-        cin >> choice;
+        cin >> *choice;
     }
 }
 
-static void Display::pirateMenu (){
-    
+void Display::pirateMenu(int *choice) {
     *choice = -1;
     
     cout << "\n\n\n                   PIRATE MANAGEMENT MENU \n\n";
@@ -37,12 +27,28 @@ static void Display::pirateMenu (){
     
     while (*choice < 0 || *choice > 1) {
         cout << "Enter your selection:  ";
-        cin >> choice;
+        cin >> *choice;
     }
-
 }
 
-static void Display::pause(){
+void Display::pause() {
     cout << "\nPress enter to continue...";
     getchar();
+}
+
+void Display::printBrig(Brig *brig) {
+    int i, j;
+
+    cout << "\n~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n";
+    cout << "Brig: #cells=" << brig->getNumCells() << endl;
+
+    for (i = 0; i < brig->getNumCells(); ++i) {
+        cout << "--Cell " << i << ": space remaining= " << brig->getCell(i)->getSpaceRemaining() << endl;
+        Cell *cell = brig->getCell(i);
+        for (j = 0; j < cell->getNumPirates(); ++j) {
+            if (cell->getPirate(j) == 0)
+                continue;
+            cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
+        }
+    }
 }
