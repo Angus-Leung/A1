@@ -1,4 +1,4 @@
-Author:   	Lance Encarnado 100938069 and Angus Leung
+Author:   	Lance Encarnado 100938069 and Angus Leung 100923995
 Date:     	February 2, 2015                                                          
 Purpose:  	To manage a prison to hold some rogue pirates using
 			a brig management system.
