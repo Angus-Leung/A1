@@ -43,12 +43,14 @@ void Display::printBrig(Brig *brig) {
     cout << "Brig: #cells=" << brig->getNumCells() << endl;
 
     for (i = 0; i < brig->getNumCells(); ++i) {
-        cout << "--Cell " << i << ": space remaining= " << brig->getCell(i)->getSpaceRemaining() << endl;
+        cout << "--Cell " << i << ": space remaining= " 
+            << brig->getCell(i)->getSpaceRemaining() << endl;
         Cell *cell = brig->getCell(i);
         for (j = 0; j < cell->getNumPirates(); ++j) {
             if (cell->getPirate(j) == 0)
                 continue;
-            cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
+            cout << "----Pirate id: " << cell->getPirate(j)->getPirateId() 
+                << "  space: " << cell->getPirate(j)->getPirateSpace() << endl;
         }
     }
 }

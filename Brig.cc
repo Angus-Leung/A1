@@ -9,11 +9,6 @@ Brig::Brig() {
     CellArray cellList = CellArray();
 }
 
-/*
-    Prompts the user to indicate the number of pirates to add,
-    and adds each pirate to the brig
-*/
-
 int Brig::getNumCells() {
     return numCells;
 }
@@ -47,7 +42,6 @@ void Brig::addOnePirate(Pirate *newPirate) {
 
     if (cell == NULL) {
         if (numCells == MAX_CELLS) {
-            // these next 2 lines could be replaced by something like pause() from Christine's util.c in a user IO object
             Display::pause();
             return;
         }
@@ -57,7 +51,6 @@ void Brig::addOnePirate(Pirate *newPirate) {
     }
 
     if (cell->getNumPirates() == MAX_PIRATES) {
-        // again, replace this with a pause() function in a user IO object
         Display::pause();
         return;
     }
