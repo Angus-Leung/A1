@@ -1,5 +1,5 @@
-p1:	main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
-	g++ -o p1 main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
+a1:	main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
+	g++ -o a1 main.o Pirate.o PirateArray.o Cell.o CellArray.o Brig.o Display.o Control.o Random.o
 
 main.o:	main.cc Pirate.h PirateArray.h Cell.h CellArray.h Brig.h Display.h Control.h
 	g++ -c main.cc
