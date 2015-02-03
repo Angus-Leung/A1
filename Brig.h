@@ -1,22 +1,22 @@
 #ifndef BRIG_H
 #define BRIG_H
 
-#include "CellArray.h"
-
 #define MAX_CELLS      48
+
+#include "CellArray.h"
 
 class Brig {
     
-//Data members
+// Data members
 private:
     int numCells;
     CellArray cellList;
     
-//Constuctors
+// Constructor
 public:
     Brig();
         
-//Functions
+// Functions
 public:
     int getNumCells();
     Cell* getCell(int);

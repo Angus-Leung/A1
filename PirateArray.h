@@ -18,10 +18,6 @@ public:
 // Member functions
 public:
     void add(Pirate*, int);
-    //void remove(int);       // the int is an index
     Pirate* getPirate(int);
-    // void set(int);
-    //int getIndex(Pirate*);
-    
 };
 #endif 

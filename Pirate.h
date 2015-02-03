@@ -3,16 +3,16 @@
 
 class Pirate {
     
-//Data members
+// Data members
 private:
     int id;
     int space;
     
-//Constuctors
+// Constructors
 public:
     Pirate();
         
-//Functions
+// Functions
 public:
     int getPirateId();
     int getPirateSpace();

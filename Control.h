@@ -3,6 +3,7 @@
 
 class Control {
 
+// Member functions
 public:
     void startProgram();
 };

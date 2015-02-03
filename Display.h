@@ -4,9 +4,9 @@
 #include "Brig.h"
 
 class Display {
-    
+
+// Member functions
 public:
-    //Functions
     static void mainMenu(int*);
     static void pirateMenu(int*);
     static void pause();

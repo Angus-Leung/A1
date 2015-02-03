@@ -7,18 +7,18 @@
 
 class Cell {
     
-//Data members
+// Data members
 private:
     PirateArray pirateList;
     int cellNumber;
     int spaceRemaining;
     int numPirates;
     
-//Constuctors
+// Constructor
 public:
     Cell();
         
-//Functions
+// Functions
 public:
     int getNextCellNum();
     int getSpaceRemaining();
